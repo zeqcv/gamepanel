@@ -2,23 +2,25 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 import Servers from "../views/Servers.vue";
 import Billing from "../views/Billing.vue";
+import Kirala from "../views/Kirala.vue";
+import Hesaplar from "../views/Hesaplar.vue";
+import Sistem from "../views/SistemDurumu.vue";
 import Files from "../views/FileManager.vue";
-import RTL from "../views/Rtl.vue";
-import Profile from "../views/Profile.vue";
-import Signup from "../views/Signup.vue";
-import Signin from "../views/Signin.vue";
+import Profil from "../views/Profile.vue";
+import Kayit from "../views/Kayit.vue";
+import Giris from "../views/Giris.vue";
 
 const routes = [
   {
     path: "/",
     name: "/",
-    redirect: "/dashboard",
+    redirect: "/giris",
     meta: {
       title: "Rustopic ⚔️ Home"
   },
   },
   {
-    path: "/dashboard",
+    path: "/anasayfa",
     name: "Dashboard",
     component: Dashboard,
     meta: {
@@ -26,39 +28,55 @@ const routes = [
   },
   },
   {
-    path: "/servers",
-    name: "Servers",
-    component: Servers,
+    path: "/kirala",
+    name: "Kirala",
+    component: Kirala,
+    meta: {
+      title: "Rustopic ⚔️ Home"
+  },
   },
   {
-    path: "/billing",
+    path: "/sunucular",
+    name: "Servers",
+    component: Servers,
+    meta: {
+      title: "Rustopic ⚔️ Home"
+  },
+  },
+  {
+    path: "/ödemeler",
     name: "Billing",
     component: Billing,
   },
   {
-    path: "/files",
+    path: "/webftp",
     name: "File Manager",
     component: Files,
   },
   {
-    path: "/rtl-page",
-    name: "RTL",
-    component: RTL,
+    path: "/hesaplar",
+    name: "Hesaplar",
+    component: Hesaplar,
   },
   {
-    path: "/profile",
+    path: "/sistem",
+    name: "Sistem",
+    component: Sistem,
+  },
+  {
+    path: "/profil",
     name: "Profile",
-    component: Profile,
+    component: Profil,
   },
   {
-    path: "/signin",
+    path: "/giris",
     name: "Signin",
-    component: Signin,
+    component: Giris,
   },
   {
-    path: "/signup",
+    path: "/kayit",
     name: "Signup",
-    component: Signup,
+    component: Kayit,
   },
   
 ];

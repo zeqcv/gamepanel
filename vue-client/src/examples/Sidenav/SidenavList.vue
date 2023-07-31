@@ -2,31 +2,39 @@
   <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <sidenav-item url="/dashboard" :class="getRoute() === 'dashboard' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Dashboard'">
+        <sidenav-item url="/anasayfa" :class="getRoute() === 'anasayfa' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Anasayfa'">
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/servers" :class="getRoute() === 'servers' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : 'Servers'">
+        <sidenav-item url="/sunucular" :class="getRoute() === 'sunucular' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الجداول' : 'Sunucular'">
           <template v-slot:icon>
             <i class="fa fa-server text-warning text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/files" :class="getRoute() === 'files' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'File Manager'">
+        <sidenav-item url="/kirala" :class="getRoute() === 'kirala' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Kirala'
+          ">
+          <template v-slot:icon>
+            <i class="ni ni-shop text-info text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item url="/webftp" :class="getRoute() === 'files' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Dosya Yöneticisi'">
           <template v-slot:icon>
             <i class="fa fa-file-archive-o text-success text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/billing" :class="getRoute() === 'billing' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Billing'
+        <sidenav-item url="/ödemeler" :class="getRoute() === 'billing' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Ödemeler'
           ">
           <template v-slot:icon>
             <i class="ni ni-credit-card text-info text-sm opacity-10"></i>
@@ -34,7 +42,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/accounts" :class="getRoute() === 'accounts' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Accounts'
+        <sidenav-item url="/hesaplar" :class="getRoute() === 'accounts' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Hesaplar'
           ">
           <template v-slot:icon>
             <i class="ni ni-circle-08 text-danger text-sm opacity-10"></i>
@@ -42,7 +50,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/system" :class="getRoute() === 'system' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'System Status'
+        <sidenav-item url="/sistem" :class="getRoute() === 'system' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : 'Sistem Durumu'
           ">
           <template v-slot:icon>
             <i class="fa fa-bar-chart text-dark text-sm opacity-10"></i>
@@ -60,24 +68,24 @@
         </h6>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/profile" :class="getRoute() === 'profile' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : 'Profile'">
+        <sidenav-item url="/profil" :class="getRoute() === 'profil' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : 'Profil'">
           <template v-slot:icon>
             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/signin" :class="getRoute() === 'signin' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'تسجيل الدخول' : 'Sign In'">
+        <sidenav-item url="/giris" :class="getRoute() === 'giris' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'تسجيل الدخول' : 'Giriş Yap'">
           <template v-slot:icon>
             <i class="ni ni-single-copy-04 text-danger text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/signup" :class="getRoute() === 'signup' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'اشتراك' : 'Sign Up'">
+        <sidenav-item url="/kayit" :class="getRoute() === 'kayit' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'اشتراك' : 'Kayıt Ol'">
           <template v-slot:icon>
             <i class="ni ni-collection text-info text-sm opacity-10"></i>
           </template>

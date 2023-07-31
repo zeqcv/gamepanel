@@ -138,7 +138,7 @@ import ArgonButton from "@/components/ArgonButton.vue";
 const body = document.getElementsByTagName("body")[0];
 
 export default {
-  name: "signin",
+  name: "kayit",
   components: {
     Navbar,
     AppFooter,
