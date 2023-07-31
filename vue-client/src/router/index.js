@@ -1,25 +1,72 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import Dashboard from "../views/Dashboard.vue";
+import Servers from "../views/Servers.vue";
+import Billing from "../views/Billing.vue";
+import Files from "../views/FileManager.vue";
+import RTL from "../views/Rtl.vue";
+import Profile from "../views/Profile.vue";
+import Signup from "../views/Signup.vue";
+import Signin from "../views/Signin.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "/",
+    redirect: "/dashboard",
+    meta: {
+      title: "Rustopic ⚔️ Home"
+  },
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard,
+    meta: {
+      title: "Rustopic ⚔️ Home"
+  },
+  },
+  {
+    path: "/servers",
+    name: "Servers",
+    component: Servers,
+  },
+  {
+    path: "/billing",
+    name: "Billing",
+    component: Billing,
+  },
+  {
+    path: "/files",
+    name: "File Manager",
+    component: Files,
+  },
+  {
+    path: "/rtl-page",
+    name: "RTL",
+    component: RTL,
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile,
+  },
+  {
+    path: "/signin",
+    name: "Signin",
+    component: Signin,
+  },
+  {
+    path: "/signup",
+    name: "Signup",
+    component: Signup,
+  },
+  
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+  linkActiveClass: "active",
+});
 
-export default router
+export default router;
